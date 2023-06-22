@@ -13,7 +13,7 @@ consumer = KafkaConsumer('sensorlogger', bootstrap_servers=['{gce_external_ip}:9
 for count, i in enumerate(consumer):
     print(count)
     print(i.value)
-    file_name = "data/smartphone_data_{}.json".format(count)
+    file_name = "smartphone_data_{}.json".format(count)
     with open(file_name, 'w') as file:
         file.write(json.dumps(i.value))
 
