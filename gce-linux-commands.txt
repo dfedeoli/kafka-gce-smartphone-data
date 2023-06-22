@@ -1,0 +1,37 @@
+### install kafka in Google Compute Engine
+wget https://downloads.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+tar -xvf kafka_2.13-3.5.0.tgz
+
+
+### install java in GCE
+sudo apt update
+sudo apt install default-jre -y
+java -version
+
+
+### start zookeeper
+cd kafka_2.13-3.5.0
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+
+### start kafka broker
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+cd kafka_2.13-3.5.0
+bin/kafka-server-start.sh config/server.properties
+
+
+## modificar os advertised listeners para o IP externo da máquina GCE
+sudo nano config/server.properties
+# modificação -> advertised.listeners=PLAINTEXT://{gce_external_ip}:9092
+
+
+### create topic in Kafka
+cd kafka_2.13-3.5.0
+bin/kafka-topics.sh --create --topic sensorlogger --bootstrap-server  {gce_external_ip}:9092 --replication-factor 1 --partitions 1
+
+### console producer for testing
+bin/kafka-console-producer.sh --topic sensorlogger --bootstrap-server  {gce_external_ip}:9092 
+
+### console consumer for testing
+cd kafka_2.13-3.5.0
+bin/kafka-console-consumer.sh --topic sensorlogger --bootstrap-server  {gce_external_ip}:9092
