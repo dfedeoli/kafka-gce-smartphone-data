@@ -11,12 +11,13 @@ GitHub repos that helped me accomplish this project:
 The idea was to get streaming Accelerometer data from my phone, send it to a Kafka Broker through a Producer .py file, get it from a Consumer .py app that sends it to Google Cloud Storage. Finally, create a BigQuery table that queries into the specific GCS bucket.
 
 Important variables in this project:
-* your_host_ip - Your machine's IP
-* gce_external_ip - Google Cloud Engine's external IP
+<pre><code>your_host_ip -> Your machine's IP  
+gce_external_ip -> Google Cloud Engine's external IP
+</code></pre>
 
 ## Sensor Logger App - Available for iOS and Android
-Pushes smartphone data (Accelerometer, gravity, gyroscope, etc) to your host IP through (default) Push URL: http://{your_host_ip}:8000/data
-See App repo above!
+Pushes smartphone data (Accelerometer, gravity, gyroscope, etc) to your host IP through (default) Push URL: http://{your_host_ip}:8000/data  
+See [App repo](https://github.com/tszheichoi/awesome-sensor-logger#the-sensor-logger-app) above!
 
 ## Producer Python file
 Flask app that sends obtained data from app to Kafka broker in GCE and also plots a graph at http://localhost:8000.
