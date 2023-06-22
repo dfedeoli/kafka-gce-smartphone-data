@@ -32,4 +32,6 @@ Gets data from Kafka topic, puts them into files and sends to Google Cloud Stora
 Receives .json files constructed in consumer.py to GCS bucket.
 
 ## BigQuery
-Create table from the bucket's .json files with the following path: smartphone_data_*.json
+Create table from the bucket's .json files with the following path:  
+<pre><code>smartphone_data_*.json
+</code></pre>
