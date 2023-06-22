@@ -20,7 +20,7 @@ Pushes smartphone data (Accelerometer, gravity, gyroscope, etc) to your host IP 
 See [App repo](https://github.com/tszheichoi/awesome-sensor-logger#the-sensor-logger-app) above!
 
 ## Producer Python file
-Flask app that sends obtained data from app to Kafka broker in GCE and also plots a graph at http://localhost:8000 (thanks to [https://github.com/tszheichoi](Kelvin Choi))
+Flask app that sends obtained data from app to Kafka broker in GCE and also plots a graph at http://localhost:8000 (thanks to [Kelvin Choi](https://github.com/tszheichoi))
 
 ## Google Compute Engine
 Kafka broker installation and configuration, according to gce-linux-commands.txt. Remember to open tcp:9092 port for ingress and egress traffic, in order to connect to it from your machine.
