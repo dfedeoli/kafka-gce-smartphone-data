@@ -23,7 +23,7 @@ See [App repo](https://github.com/tszheichoi/awesome-sensor-logger#the-sensor-lo
 Flask app that sends obtained data from app to Kafka broker in GCE and also plots a graph at http://localhost:8000 (thanks to [Kelvin Choi](https://github.com/tszheichoi))
 
 ## Google Compute Engine
-Kafka broker installation and configuration, according to gce-linux-commands.txt. Remember to open tcp:9092 port for ingress and egress traffic, in order to connect to it from your machine.
+Kafka broker installation and configuration, according to gce-linux-commands.txt. Machine config: e2-micro, Ubuntu 20.04 LTS. Remember to open tcp:9092 port for ingress and egress traffic, in order to connect to it from your machine.
 
 ## Consumer Python file
 Gets data from Kafka topic, puts them into files and sends to Google Cloud Storage.
