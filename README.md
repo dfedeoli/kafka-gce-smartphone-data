@@ -20,7 +20,7 @@ Pushes smartphone data (Accelerometer, gravity, gyroscope, etc) to your host IP 
 See [App repo](https://github.com/tszheichoi/awesome-sensor-logger#the-sensor-logger-app) above!
 
 ## Producer Python file
-Flask app that sends obtained data from app to Kafka broker in GCE and also plots a graph at http://localhost:8000 (thanks to [Kelvin Choi](https://github.com/tszheichoi))
+Flask app that sends obtained data from mobile app to Kafka broker in GCE and also plots a graph at http://localhost:8000 (thanks to [Kelvin Choi](https://github.com/tszheichoi))
 
 ## Google Compute Engine
 Kafka broker installation and configuration, according to gce-linux-commands.txt. Machine config: e2-micro, Ubuntu 20.04 LTS. Remember to open tcp:9092 port for ingress and egress traffic, in order to connect to it from your machine.
@@ -29,9 +29,9 @@ Kafka broker installation and configuration, according to gce-linux-commands.txt
 Gets data from Kafka topic, puts them into files and sends to Google Cloud Storage.
 
 ## Google Cloud Storage
-Receives .json files constructed in consumer.py to GCS bucket.
+Bucket receives .json files constructed in consumer.py.
 
 ## BigQuery
-Create table from the bucket's .json files with the following path:  
+Create table from bucket's .json files with the following path:  
 <pre><code>smartphone_data_*.json
 </code></pre>
