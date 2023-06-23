@@ -3,7 +3,7 @@
 Streaming Smartphone Data (Sensor Logger App) through Kafka with Python, Google Compute Engine, Cloud Storage and BigQuery
 
 GitHub repos that helped me accomplish this project:
-* [Awesome Sensor Logger](https://github.com/tszheichoi/awesome-sensor-logger#the-sensor-logger-app) - Sensor Logger App repo
+* [Awesome Sensor Logger](https://github.com/tszheichoi/awesome-sensor-logger#live-data-streaming) - Sensor Logger App repo
 * [Stock Market Kafka Real Time Data Engineering Project](https://github.com/darshilparmar/stock-market-kafka-data-engineering-project)
   
 ![alt-text](https://github.com/dfedeoli/kafka-gce-smartphone-data/blob/main/kafka-gcp.drawio.png?raw=true)
