@@ -72,7 +72,7 @@ def data():  # listens to the data streamed from the sensor logger
 		
 		for d in data['payload']:
 			print(d['values'])
-			producer.send('sensorlogger', d['values'])
+			producer.send('sensorlogger', d)
 			if (
 				d.get("name", None) == "accelerometer"
 			):  #  modify to access different sensors
